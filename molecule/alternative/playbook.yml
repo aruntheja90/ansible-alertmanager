@@ -28,3 +28,7 @@
       peers:
         - "127.0.0.1:6783"
         - "demo.cloudalchemy.org:6783"
+    alertmanager_child_routes:
+      - match_re:
+          service: ^(foo1|foo2|baz)$
+        receiver: slack
